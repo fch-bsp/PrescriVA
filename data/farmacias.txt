@@ -1,0 +1,100 @@
+FARMÁCIA: Onofree
+CIDADE: São Paulo
+ENDEREÇOS:
+- Av. Paulista, 1500 - Bela Vista, São Paulo/SP
+- Rua Augusta, 2200 - Jardins, São Paulo/SP
+- Av. Brigadeiro Faria Lima, 3500 - Itaim Bibi, São Paulo/SP
+TELEFONE: (11) 3333-4444
+HORÁRIO: Segunda a Domingo, 24h
+
+FARMÁCIA: Onofree
+CIDADE: Rio de Janeiro
+ENDEREÇOS:
+- Av. Atlântica, 1200 - Copacabana, Rio de Janeiro/RJ
+- Rua Visconde de Pirajá, 550 - Ipanema, Rio de Janeiro/RJ
+TELEFONE: (21) 2222-3333
+HORÁRIO: Segunda a Domingo, 24h
+
+FARMÁCIA: Onofree
+CIDADE: Belo Horizonte
+ENDEREÇOS:
+- Av. do Contorno, 6500 - Savassi, Belo Horizonte/MG
+- Rua da Bahia, 1200 - Centro, Belo Horizonte/MG
+TELEFONE: (31) 3333-5555
+HORÁRIO: Segunda a Domingo, 24h
+
+FARMÁCIA: SP Drogaria
+CIDADE: São Paulo
+ENDEREÇOS:
+- Av. Rebouças, 3000 - Pinheiros, São Paulo/SP
+- Rua Oscar Freire, 900 - Jardins, São Paulo/SP
+- Av. Santo Amaro, 4500 - Brooklin, São Paulo/SP
+- Rua Teodoro Sampaio, 1020 - Pinheiros, São Paulo/SP
+TELEFONE: (11) 4444-5555
+HORÁRIO: Segunda a Sábado, 7h às 22h. Domingo, 8h às 20h
+
+FARMÁCIA: SP Drogaria
+CIDADE: Rio de Janeiro
+ENDEREÇOS:
+- Av. Nossa Senhora de Copacabana, 800 - Copacabana, Rio de Janeiro/RJ
+- Rua Voluntários da Pátria, 350 - Botafogo, Rio de Janeiro/RJ
+TELEFONE: (21) 3333-4444
+HORÁRIO: Segunda a Sábado, 7h às 22h. Domingo, 8h às 20h
+
+FARMÁCIA: SP Drogaria
+CIDADE: Belo Horizonte
+ENDEREÇOS:
+- Av. Afonso Pena, 3500 - Centro, Belo Horizonte/MG
+- Rua Pium-í, 750 - Cruzeiro, Belo Horizonte/MG
+TELEFONE: (31) 4444-5555
+HORÁRIO: Segunda a Sábado, 7h às 22h. Domingo, 8h às 20h
+
+FARMÁCIA: Menos
+CIDADE: São Paulo
+ENDEREÇOS:
+- Av. Ibirapuera, 2400 - Moema, São Paulo/SP
+- Rua Pamplona, 800 - Jardim Paulista, São Paulo/SP
+- Av. Sumaré, 1500 - Perdizes, São Paulo/SP
+TELEFONE: (11) 5555-6666
+HORÁRIO: Segunda a Sábado, 8h às 21h. Domingo, 9h às 18h
+
+FARMÁCIA: Menos
+CIDADE: Rio de Janeiro
+ENDEREÇOS:
+- Av. Bartolomeu Mitre, 450 - Leblon, Rio de Janeiro/RJ
+- Rua Barata Ribeiro, 600 - Copacabana, Rio de Janeiro/RJ
+TELEFONE: (21) 4444-5555
+HORÁRIO: Segunda a Sábado, 8h às 21h. Domingo, 9h às 18h
+
+FARMÁCIA: Menos
+CIDADE: Belo Horizonte
+ENDEREÇOS:
+- Av. Getúlio Vargas, 1300 - Savassi, Belo Horizonte/MG
+- Rua Sergipe, 1100 - Savassi, Belo Horizonte/MG
+TELEFONE: (31) 5555-6666
+HORÁRIO: Segunda a Sábado, 8h às 21h. Domingo, 9h às 18h
+
+FARMÁCIA: Mais
+CIDADE: São Paulo
+ENDEREÇOS:
+- Av. Brigadeiro Luís Antônio, 3200 - Jardim Paulista, São Paulo/SP
+- Rua Vergueiro, 1800 - Vila Mariana, São Paulo/SP
+- Av. Giovanni Gronchi, 5500 - Morumbi, São Paulo/SP
+TELEFONE: (11) 6666-7777
+HORÁRIO: Segunda a Domingo, 7h às 23h
+
+FARMÁCIA: Mais
+CIDADE: Rio de Janeiro
+ENDEREÇOS:
+- Av. Vieira Souto, 200 - Ipanema, Rio de Janeiro/RJ
+- Rua Conde de Bonfim, 550 - Tijuca, Rio de Janeiro/RJ
+TELEFONE: (21) 5555-6666
+HORÁRIO: Segunda a Domingo, 7h às 23h
+
+FARMÁCIA: Mais
+CIDADE: Belo Horizonte
+ENDEREÇOS:
+- Av. Nossa Senhora do Carmo, 800 - Sion, Belo Horizonte/MG
+- Rua Fernandes Tourinho, 600 - Savassi, Belo Horizonte/MG
+TELEFONE: (31) 6666-7777
+HORÁRIO: Segunda a Domingo, 7h às 23h

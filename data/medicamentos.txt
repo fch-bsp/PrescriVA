@@ -1,0 +1,153 @@
+MEDICAMENTO: Amoxicilina
+LABORATÓRIO: EMS
+PREÇO: R$ 25,90
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Antibiótico de amplo espectro. Tomar com água, de preferência em jejum. Pode causar diarreia, náuseas e reações alérgicas. Não recomendado para pessoas alérgicas a penicilina.
+
+MEDICAMENTO: Dipirona
+LABORATÓRIO: Medley
+PREÇO: R$ 12,50
+VALIDADE: 36 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Analgésico e antitérmico. Tomar com água. Pode causar reações alérgicas graves em pessoas sensíveis. Não recomendado durante a gravidez.
+
+MEDICAMENTO: Omeprazol
+LABORATÓRIO: Medley
+PREÇO: R$ 18,75
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Inibidor da bomba de prótons. Tomar em jejum, 30 minutos antes da primeira refeição. Não mastigar ou triturar. Pode causar dor de cabeça e diarreia.
+
+MEDICAMENTO: Losartana
+LABORATÓRIO: EMS
+PREÇO: R$ 22,30
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Anti-hipertensivo. Tomar preferencialmente no mesmo horário todos os dias. Pode causar tontura e hipotensão. Não interromper o tratamento sem orientação médica.
+
+MEDICAMENTO: Atenolol
+LABORATÓRIO: Biosintética
+PREÇO: R$ 15,40
+VALIDADE: 36 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Beta-bloqueador. Tomar no mesmo horário todos os dias. Pode causar fadiga e bradicardia. Não interromper abruptamente.
+
+MEDICAMENTO: Metformina
+LABORATÓRIO: Merck
+PREÇO: R$ 19,80
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Antidiabético oral. Tomar durante ou após as refeições. Pode causar desconforto gastrointestinal. Evitar consumo de álcool durante o tratamento.
+
+MEDICAMENTO: Sinvastatina
+LABORATÓRIO: Sandoz
+PREÇO: R$ 28,50
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Redutor de colesterol. Tomar preferencialmente à noite. Pode causar dores musculares. Evitar consumo de toranja (grapefruit) durante o tratamento.
+
+MEDICAMENTO: Fluoxetina
+LABORATÓRIO: EMS
+PREÇO: R$ 32,70
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Antidepressivo. Tomar pela manhã. Pode causar insônia, náuseas e diminuição da libido. Efeito terapêutico pode levar algumas semanas.
+
+MEDICAMENTO: Paracetamol
+LABORATÓRIO: Neo Química
+PREÇO: R$ 8,90
+VALIDADE: 36 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Analgésico e antitérmico. Tomar com água. Não exceder a dose máxima diária. Pode causar danos ao fígado em doses elevadas.
+
+MEDICAMENTO: Ibuprofeno
+LABORATÓRIO: Medley
+PREÇO: R$ 14,30
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Anti-inflamatório não esteroidal. Tomar após as refeições. Pode causar desconforto gastrointestinal e reações alérgicas. Não recomendado para pessoas com úlcera gástrica.
+
+MEDICAMENTO: Azitromicina
+LABORATÓRIO: Eurofarma
+PREÇO: R$ 35,60
+VALIDADE: 24 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Antibiótico macrolídeo. Tomar 03 comprimidos no primeiro dia. Após, tomar 01 comprimido ao dia. Pode causar diarreia e náuseas. Completar o tratamento mesmo com melhora dos sintomas.
+
+MEDICAMENTO: Loratadina
+LABORATÓRIO: Mantecorp
+PREÇO: R$ 17,20
+VALIDADE: 36 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Anti-histamínico. Tomar preferencialmente em jejum. Pode causar sonolência leve. Não ingerir bebidas alcoólicas durante o tratamento.
+
+MEDICAMENTO: Dexametasona
+LABORATÓRIO: Aché
+PREÇO: R$ 21,40
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Corticosteroide. Tomar 02 comprimidos 01 hora antes da cirurgia. Após, tomar 01 comprimido de 12/12 horas. Pode causar retenção de líquidos e aumento da pressão arterial. Não interromper abruptamente.
+
+MEDICAMENTO: Enalapril
+LABORATÓRIO: Biosintética
+PREÇO: R$ 19,30
+VALIDADE: 24 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Inibidor da ECA. Tomar no mesmo horário todos os dias. Pode causar tosse seca persistente. Monitorar a pressão arterial regularmente.
+
+MEDICAMENTO: Levotiroxina
+LABORATÓRIO: Merck
+PREÇO: R$ 16,80
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Hormônio tireoidiano. Tomar em jejum, 30 minutos antes do café da manhã. Não tomar junto com alimentos ou outros medicamentos. Ajustes de dose devem ser feitos sob supervisão médica.
+
+MEDICAMENTO: Ranitidina
+LABORATÓRIO: Medley
+PREÇO: R$ 13,90
+VALIDADE: 36 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Antagonista H2. Tomar antes das refeições e ao deitar. Pode causar dor de cabeça e constipação. Evitar uso prolongado sem supervisão médica.
+
+MEDICAMENTO: Prednisona
+LABORATÓRIO: EMS
+PREÇO: R$ 24,50
+VALIDADE: 24 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Corticosteroide. Tomar preferencialmente pela manhã com alimentos. Pode causar aumento de apetite e insônia. Não interromper abruptamente o tratamento.
+
+MEDICAMENTO: Anlodipino
+LABORATÓRIO: Biosintética
+PREÇO: R$ 26,70
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos, Mais
+BULA: Bloqueador dos canais de cálcio. Tomar no mesmo horário todos os dias. Pode causar edema periférico e rubor facial. Evitar consumo de toranja (grapefruit).
+
+MEDICAMENTO: Ciprofloxacino
+LABORATÓRIO: Eurofarma
+PREÇO: R$ 31,20
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Antibiótico fluoroquinolona. Tomar com bastante água, 2 horas após as refeições. Pode causar tendinite e ruptura de tendão. Evitar exposição solar durante o tratamento.
+
+MEDICAMENTO: Clonazepam
+LABORATÓRIO: Roche
+PREÇO: R$ 29,80
+VALIDADE: 36 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Benzodiazepínico. Tomar conforme prescrição médica. Pode causar sonolência e dependência. Não interromper abruptamente e não consumir álcool durante o tratamento.
+
+MEDICAMENTO: Cefaloxino
+LABORATÓRIO: Medley
+PREÇO: R$ 27,50
+VALIDADE: 24 meses
+FARMÁCIAS: Onofree, SP Drogaria, Menos
+BULA: Antibiótico cefalosporínico. Tomar com água, a cada 8 horas conforme prescrito. Completar todo o tratamento mesmo com melhora dos sintomas. Pode causar diarreia e reações alérgicas. Não recomendado para pessoas com histórico de alergia a antibióticos beta-lactâmicos.
+
+MEDICAMENTO: Diazepam
+LABORATÓRIO: Teuto
+PREÇO: R$ 18,30
+VALIDADE: 36 meses
+FARMÁCIAS: SP Drogaria, Menos, Mais
+BULA: Benzodiazepínico. Tomar 01 comprimido 01 hora antes da cirurgia. Em caso de dor forte, tomar 01 comprimido de 6/6 horas. Pode causar sonolência, tontura e dependência. Não consumir álcool durante o tratamento e não dirigir ou operar máquinas após o uso.
