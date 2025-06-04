@@ -13,6 +13,8 @@
 
 ![Image](https://github.com/user-attachments/assets/5c5e7128-1093-468c-b399-5d83f572f021)
 
+![Image](https://github.com/user-attachments/assets/f4179a19-adba-4660-bde8-44c2f4d8558d)
+
 
 
 O PrescriVA é uma solução inovadora que utiliza inteligência artificial para interpretar receitas médicas, tornando as informações mais acessíveis e compreensíveis para os pacientes. A plataforma combina tecnologias de OCR (Reconhecimento Óptico de Caracteres) e processamento de linguagem natural para extrair, estruturar e explicar prescrições médicas de forma clara e objetiva.
