@@ -2,7 +2,7 @@ import streamlit as st
 from backend.ocr import process_image
 from backend.pdf_generator import generate_pdf
 from backend.s3_uploader import upload_to_s3
-from backend.openai_agent import OpenAIAgent
+from backend.model_router import ModelRouter, TaskType
 import os
 import tempfile
 import base64
@@ -14,8 +14,8 @@ st.set_page_config(
     layout="wide"
 )
 
-# Inicialização do agente OpenAI
-openai_agent = OpenAIAgent()
+# Inicialização do roteador de modelos
+model_router = ModelRouter()
 
 # Função para carregar CSS personalizado
 def local_css():
@@ -123,14 +123,14 @@ with col1:
         
         # Botão para processar a imagem
         if st.button("Interpretar Receita"):
-            with st.spinner("Processando a receita..."):
+            with st.spinner("Processando a receita com GPT-4o (Farmacêutico Analisador de Atestados)..."):
                 # Salvar o arquivo temporariamente
                 temp_file = tempfile.NamedTemporaryFile(delete=False)
                 temp_file.write(uploaded_file.getvalue())
                 temp_file.close()
                 
-                # Processar a imagem com OCR e o agente OpenAI
-                prescription_data = process_image(temp_file.name, openai_agent)
+                # Processar a imagem com OCR e o modelo GPT-4o através do roteador
+                prescription_data = process_image(temp_file.name, model_router, TaskType.PRESCRIPTION_ANALYSIS)
                 st.session_state.prescription_data = prescription_data
                 
                 # Remover o arquivo temporário
@@ -203,10 +203,10 @@ with col2:
             # Adicionar mensagem do usuário ao histórico
             st.session_state.chat_history.append({"role": "user", "content": query})
             
-            # Obter resposta do agente
-            with st.spinner("Consultando o assistente..."):
+            # Obter resposta do agente através do roteador
+            with st.spinner("Consultando o assistente com GPT-3.5 Turbo (Farmacêutico para Atendimento ao Cliente)..."):
                 prescription_context = st.session_state.prescription_data if st.session_state.prescription_data else {}
-                response = openai_agent.get_response(query, prescription_context)
+                response = model_router.route_request(TaskType.CHAT, query, prescription_context)
                 
                 # Adicionar resposta do agente ao histórico
                 st.session_state.chat_history.append({"role": "assistant", "content": response})
@@ -217,8 +217,12 @@ with col2:
     # Campo de entrada para o chat com callback
     st.text_input("Digite sua pergunta:", key="query", on_change=process_query)
     
-    # Exibir informações sobre o modelo
-    st.markdown(f"<div class='model-info'>Modelo: {openai_agent.model} | Powered by OpenAI</div>", unsafe_allow_html=True)
+    # Exibir informações sobre o modelo com descrição das funções
+    st.markdown(f"""<div class='model-info'>
+        <b>Chat:</b> GPT-3.5 Turbo (Farmacêutico para Atendimento ao Cliente) | 
+        <b>Análise de Receitas:</b> GPT-4o (Farmacêutico Analisador de Atestados) | 
+        Powered by OpenAI
+    </div>""", unsafe_allow_html=True)
 
 # Rodapé
 st.markdown("---")

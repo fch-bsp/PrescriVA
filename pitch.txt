@@ -1,0 +1,119 @@
+Crie uma aplicação de IA com as seguintes características:
+
+🧠 Objetivo do PrescriVA:
+Desenvolver um assistente virtual inteligente que interpreta receitas médicas escritas à mão, organiza as informações de forma clara para o paciente, e permite a geração de um PDF com instruções acessíveis, salvando o arquivo em um bucket S3. O sistema também oferece um chat com IA farmacêutica para orientar o paciente.
+
+🔙 Back-end:
+Linguagem: Python
+
+IA: Agente baseado no Google Gemini
+
+Arquitetura com suporte a RAG (Retrieval-Augmented Generation).
+
+Componentes:
+
+OCR para extrair conteúdo da receita médica.
+
+Processamento e estruturação dos dados.
+
+Geração de PDF com orientações claras.
+
+Envio do PDF para bucket S3.
+
+Banco de dados com:
+
+Medicamentos, preços, laboratórios, validade, farmácias (Onofree, SP Drogaria, Menos e Mais).
+
+Pelo menos 50 linhas de dados para testes.
+
+Consulta adicional a arquivos .txt, como:
+
+farmacias.txt – endereços de farmácias nas cidades SP, RJ e MG.
+
+medicamentos.txt – medicações com bula e instruções.
+
+O agente farmacêutico deve responder a perguntas como:
+
+"Qual o valor total da medicação?"
+
+"Onde encontro essa medicação?"
+
+"Como devo tomar esse remédio ao longo da semana?"
+
+💻 Front-end:
+Framework: Streamlit
+
+Interface:
+
+Profissional, leve e responsiva.
+
+Sem emojis.
+
+Ícones personalizados conforme o tema da aplicação.
+
+Upload da imagem da receita.
+
+Exibição estruturada das instruções da receita.
+
+Geração e download de PDF.
+
+Chat com a IA farmacêutica.
+
+🔁 Fluxo do PrescriVA:
+Paciente faz upload da imagem da receita.
+
+IA realiza OCR e extrai as informações.
+
+A prescrição é exibida de forma organizada na tela.
+
+O paciente pode:
+
+Interagir com o agente farmacêutico no chat.
+
+Gerar e salvar o PDF da receita.
+
+Enviar o PDF automaticamente para um bucket S3.
+
+❤️ Acessibilidade e Impacto Humanitário:
+O PrescriVA tem como missão democratizar o entendimento de prescrições médicas com apoio de IA.
+
+Recursos previstos:
+
+Linguagem simples nas orientações.
+
+Opção de leitura em voz alta.
+
+Layout do PDF acessível, com:
+
+Nome do medicamento.
+
+Horários (manhã/tarde/noite).
+
+Quantidade.
+
+Instruções especiais.
+
+Alertas sobre:
+
+Riscos da automedicação.
+
+Interações perigosas (quando aplicável).
+
+Cuidados especiais por idade ou condição.
+
+O sistema é ideal para:
+
+Pessoas idosas ou com deficiência.
+
+Regiões com acesso limitado a farmacêuticos.
+
+Apoio a familiares e cuidadores.
+
+🎯 Requisitos Técnicos:
+Separação clara entre front-end e back-end.
+
+Código modular e documentado.
+
+Integração pronta com S3 e expansível para outros buckets.
+
+Suporte para futuras conexões com novas fontes de dados.

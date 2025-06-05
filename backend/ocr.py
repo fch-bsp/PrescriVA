@@ -26,13 +26,14 @@ def check_tesseract():
         print("===========================================================\n\n")
         return False
 
-def process_image(image_path, openai_agent):
+def process_image(image_path, model_router, task_type=None):
     """
-    Processa a imagem da receita médica usando OCR e o agente OpenAI para extrair informações estruturadas.
+    Processa a imagem da receita médica usando OCR e o roteador de modelos para extrair informações estruturadas.
     
     Args:
         image_path (str): Caminho para a imagem da receita
-        openai_agent: Instância do agente OpenAI para interpretação
+        model_router: Instância do roteador de modelos
+        task_type: Tipo de tarefa para roteamento (padrão: análise de prescrição)
         
     Returns:
         dict: Dicionário com as informações estruturadas da receita
@@ -99,8 +100,15 @@ def process_image(image_path, openai_agent):
         
         print(f"Texto extraído pelo OCR: {text[:100]}...")  # Imprimir os primeiros 100 caracteres para debug
         
-        # Usar o agente OpenAI para interpretar o texto extraído
-        prescription_data = openai_agent.interpret_prescription(text)
+        # Usar o roteador de modelos para interpretar o texto extraído
+        from backend.model_router import TaskType
+        
+        # Se task_type não foi especificado, usar o padrão para análise de prescrição
+        if task_type is None:
+            task_type = TaskType.PRESCRIPTION_ANALYSIS
+            
+        # Rotear a solicitação para o modelo adequado (GPT-4o para análise de prescrição)
+        prescription_data = model_router.route_request(task_type, text)
         
         return prescription_data
     

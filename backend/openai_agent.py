@@ -42,12 +42,13 @@ class OpenAIAgent:
         except FileNotFoundError:
             self.farmacias_data = "Arquivo de farmácias não encontrado."
     
-    def interpret_prescription(self, ocr_text):
+    def interpret_prescription(self, ocr_text, system_prompt=None):
         """
         Interpreta o texto da receita médica extraído pelo OCR.
         
         Args:
             ocr_text (str): Texto extraído da receita médica
+            system_prompt (str, optional): Prompt de sistema personalizado
             
         Returns:
             dict: Dicionário com as informações estruturadas da receita
@@ -61,9 +62,14 @@ class OpenAIAgent:
                 "medicamentos": [],
                 "observacoes": "Texto da receita vazio ou não reconhecido pelo OCR."
             }
+        
+        # Usar o prompt personalizado se fornecido, caso contrário usar o padrão
+        if system_prompt is None:
+            system_prompt = """
+            Você é um assistente especializado em interpretar receitas médicas com alta precisão.
+            """
             
         prompt = f"""
-        Você é um assistente especializado em interpretar receitas médicas.
         Analise o texto a seguir, que foi extraído de uma receita médica usando OCR, e estruture as informações com alta precisão.
         
         Texto da receita:
@@ -92,7 +98,7 @@ class OpenAIAgent:
                 response = self.client.chat.completions.create(
                     model=self.model,
                     messages=[
-                        {"role": "system", "content": "Você é um assistente especializado em interpretar receitas médicas com alta precisão."},
+                        {"role": "system", "content": system_prompt},
                         {"role": "user", "content": prompt}
                     ],
                     temperature=0.1,  # Temperatura baixa para respostas mais determinísticas
@@ -148,13 +154,14 @@ class OpenAIAgent:
             "observacoes": "Não foi possível interpretar a receita após várias tentativas."
         }
     
-    def get_response(self, query, prescription_context=None):
+    def get_response(self, query, prescription_context=None, system_prompt=None):
         """
         Obtém uma resposta do agente OpenAI para uma pergunta do usuário.
         
         Args:
             query (str): Pergunta do usuário
             prescription_context (dict): Contexto da prescrição atual
+            system_prompt (str, optional): Prompt de sistema personalizado
             
         Returns:
             str: Resposta do agente
@@ -181,13 +188,15 @@ class OpenAIAgent:
         {self.farmacias_data}
         """
         
-        system_prompt = """
-        Você é um assistente farmacêutico virtual chamado PrescriVA.
-        Sua função é ajudar pacientes a entender suas receitas médicas e fornecer informações precisas sobre medicamentos.
-        Forneça respostas claras, precisas e úteis. Se não tiver informações suficientes, 
-        indique isso e sugira que o paciente consulte um farmacêutico ou médico.
-        Sempre alerte sobre os riscos da automedicação quando apropriado.
-        """
+        # Usar o prompt personalizado se fornecido, caso contrário usar o padrão
+        if system_prompt is None:
+            system_prompt = """
+            Você é um assistente farmacêutico virtual chamado PrescriVA.
+            Sua função é ajudar pacientes a entender suas receitas médicas e fornecer informações precisas sobre medicamentos.
+            Forneça respostas claras, precisas e úteis. Se não tiver informações suficientes, 
+            indique isso e sugira que o paciente consulte um farmacêutico ou médico.
+            Sempre alerte sobre os riscos da automedicação quando apropriado.
+            """
         
         max_retries = 3
         retry_delay = 2

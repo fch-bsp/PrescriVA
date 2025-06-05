@@ -1,125 +1,100 @@
-# PrescriVA
+# PrescriVA - Assistente Virtual para Interpretação de Receitas Médicas
 
-<div align="center">
-  <h3>Assistente Virtual Inteligente para Interpretação de Receitas Médicas</h3>
-  <p>Democratizando o acesso à informação médica com Inteligência Artificial</p>
-</div>
+PrescriVA é uma aplicação que utiliza inteligência artificial para interpretar receitas médicas e fornecer informações úteis aos pacientes sobre seus medicamentos.
 
-## 🌟 Visão Geral
+## Arquitetura do Sistema
 
-![Image](https://github.com/user-attachments/assets/6cef3aa4-6f64-453d-adbd-7ca8714b8d00)
+A aplicação utiliza um sistema de roteamento inteligente entre modelos de IA para otimizar o desempenho e a precisão:
 
-![Image](https://github.com/user-attachments/assets/9cc5d1ea-3402-4efe-9b08-9768fdcdc7b4)
+```
+[Usuário]
+   |
+   v
+[App Frontend (Streamlit)]
+   |
+   v
+[Backend com lógica de roteamento + Instruções específicas]
+   ├──> GPT-3.5 Turbo (Chat com cliente) + Instruções de Farmacêutico para Atendimento
+   └──> GPT-4o (Análise de atestado/receita) + Instruções de Farmacêutico Analisador
+```
 
-![Image](https://github.com/user-attachments/assets/5c5e7128-1093-468c-b399-5d83f572f021)
+## Componentes Principais
 
-![Image](https://github.com/user-attachments/assets/983964f3-2d22-4f1f-bd52-8ca8406e30ef)
+- **Frontend**: Interface de usuário construída com Streamlit
+- **Backend**:
+  - **ModelRouter**: Direciona solicitações para o modelo mais adequado com base no tipo de tarefa
+  - **OCR**: Extração de texto de imagens de receitas médicas
+  - **Agentes de IA**: Interpretação de receitas e resposta a perguntas dos usuários
+  - **Instruções Específicas**: Cada agente recebe instruções personalizadas para sua função
 
+## Modelos de IA Utilizados
 
+- **GPT-3.5 Turbo (Farmacêutico para Atendimento ao Cliente)**: Utilizado para chat com o cliente, oferecendo bom equilíbrio entre desempenho e custo. Especializado em responder dúvidas sobre medicamentos com linguagem acessível e educativa.
+- **GPT-4o (Farmacêutico Analisador de Atestados)**: Utilizado para análise de atestados e receitas médicas, onde maior precisão é necessária. Especializado em extrair informações detalhadas de receitas com atenção técnica e criteriosa.
 
-O PrescriVA é uma solução inovadora que utiliza inteligência artificial para interpretar receitas médicas, tornando as informações mais acessíveis e compreensíveis para os pacientes. A plataforma combina tecnologias de OCR (Reconhecimento Óptico de Caracteres) e processamento de linguagem natural para extrair, estruturar e explicar prescrições médicas de forma clara e objetiva.
+## Funcionalidades
 
-## 🚀 Principais Funcionalidades
+- Upload de imagens de receitas médicas
+- Extração e interpretação automática das informações da receita
+- Chat com assistente virtual para tirar dúvidas sobre medicamentos
+- Geração de PDF com informações estruturadas da receita
+- Armazenamento de documentos na nuvem (AWS S3)
 
-### Interpretação de Receitas
-- **Reconhecimento Avançado**: Processamento de imagens de receitas médicas escritas à mão ou digitadas
-- **Extração Inteligente**: Identificação precisa de médico, paciente, data, medicamentos e instruções
-- **Estruturação de Dados**: Organização clara das informações extraídas em formato padronizado
-
-### Assistente Farmacêutico Virtual
-- **Chat Interativo**: Interface conversacional para tirar dúvidas sobre medicamentos
-- **Base de Conhecimento**: Informações detalhadas sobre mais de 20 medicamentos comuns
-- **Orientações Personalizadas**: Respostas contextualizadas com base na receita do paciente
-
-### Documentação e Armazenamento
-- **Geração de PDF**: Criação automática de documentos com layout profissional e acessível
-- **Armazenamento em Nuvem**: Integração com AWS S3 para salvar documentos com segurança
-- **Download Local**: Opção para baixar o PDF gerado diretamente no dispositivo
-
-## 💻 Tecnologias Utilizadas
-
-- **Backend**: Python, OpenAI API, SQLite
-- **Frontend**: Streamlit
-- **Processamento de Imagem**: OpenCV, Tesseract OCR
-- **Geração de PDF**: ReportLab
-- **Armazenamento**: AWS S3
-
-## ⚙️ Requisitos
+## Requisitos
 
 - Python 3.8+
 - Tesseract OCR
-- Chave de API OpenAI
-- Credenciais AWS (opcional, para funcionalidade de armazenamento em nuvem)
+- Chave de API da OpenAI
+- Credenciais AWS (opcional, para armazenamento em S3)
 
-## 🔧 Instalação
+## Instalação
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/prescriva.git
-cd prescriva
-```
-
-2. Instale as dependências:
-```bash
-pip install -r requirements.txt
-```
-
+1. Clone o repositório
+2. Instale as dependências: `pip install -r requirements.txt`
 3. Instale o Tesseract OCR:
    - Ubuntu/Debian: `sudo apt-get install tesseract-ocr tesseract-ocr-por`
    - macOS: `brew install tesseract tesseract-lang`
    - Windows: Baixe o instalador em https://github.com/UB-Mannheim/tesseract/wiki
+4. Configure as variáveis de ambiente:
+   - Crie um arquivo `.env` na raiz do projeto
+   - Adicione sua chave da API OpenAI: `OPENAI_API_KEY=sua_chave_aqui`
 
-4. Configure o arquivo `.env` com suas credenciais:
-```
-OPENAI_API_KEY="sua-chave-api-aqui"
-AWS_ACCESS_KEY_ID="sua-access-key"
-AWS_SECRET_ACCESS_KEY="sua-secret-key"
-AWS_REGION="sua-regiao"
-S3_BUCKET="seu-bucket"
-profile="seu-perfil-aws"
-```
+## Execução
 
-5. Inicialize o banco de dados:
 ```bash
-python init_database.py
+python app.py
 ```
 
-## 🚀 Execução
+Ou use o script de execução:
 
-Execute o script de inicialização:
 ```bash
 ./run_prescriva.sh
 ```
 
-Ou inicie manualmente:
-```bash
-streamlit run app.py
+## Estrutura do Projeto
+
+```
+App_PrescriVA/
+├── assets/                # Recursos estáticos (imagens, logos)
+├── backend/               # Lógica de backend
+│   ├── __init__.py
+│   ├── database.py        # Operações de banco de dados
+│   ├── gemini_agent.py    # Agente Google Gemini (alternativo)
+│   ├── model_router.py    # Roteador de modelos de IA
+│   ├── model_instructions.py # Instruções específicas para cada modelo
+│   ├── ocr.py             # Processamento de imagens e OCR
+│   ├── openai_agent.py    # Agente OpenAI
+│   ├── pdf_generator.py   # Geração de PDFs
+│   └── s3_uploader.py     # Upload para AWS S3
+├── data/                  # Dados e banco de dados
+├── app.py                 # Aplicação principal
+└── requirements.txt       # Dependências do projeto
 ```
 
-Acesse a interface web no navegador: http://localhost:8501
+## Contribuição
 
-## 🔒 Segurança e Privacidade
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
 
-- Processamento local de imagens
-- Não armazena dados sensíveis de pacientes
-- Comunicação segura com APIs externas
-- Opção de armazenamento em nuvem com criptografia
-
-## 👥 Impacto Social
-
-O PrescriVA foi desenvolvido com foco em acessibilidade e inclusão, beneficiando especialmente:
-
-- Pessoas idosas com dificuldade para ler receitas manuscritas
-- Pacientes com deficiência visual parcial
-- Cuidadores e familiares responsáveis pela administração de medicamentos
-- Comunidades com acesso limitado a orientação farmacêutica
-
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a licença MIT.
-
----
-
-<div align="center">
-  <p>Desenvolvido por Fernando Horas</p>
-</div>
